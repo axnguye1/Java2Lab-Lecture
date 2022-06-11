@@ -67,7 +67,7 @@ public abstract class Dog{
     //object's equals reference equality
     //if two references point to the same object, then those memory addresses
     //(values assigned to variables),are equals
-    public boolean equals(Object other){
+    public boolean equals(Object other) {
 
         /* this is what objects equals does
         if(this==other)
@@ -75,17 +75,20 @@ public abstract class Dog{
         return false;
         what i want is a deeper value
     */
+        double tolerance = 0.00001;
 
-if (other == null  )
-    return false;
-if(other == this)
-    return true;
-return this.getName() == ((Dog) other).getName() &&
-        this.getAge() == ((Dog) other).getAge() &&
-        this.getHeight() == ((Dog)other).getHeight() &&
-        this.getFedOrNot() == ((Dog)other).getFedOrNot();
-
+        if (this.getClass() != other.getClass() )
+            return false;
+        else
+        return this.getName() == ((Dog) other).getName() &&
+                this.getAge() == ((Dog) other).getAge() &&
+                this.getFedOrNot() == ((Dog) other).getFedOrNot() &&
+               // && this.getHeight() == ((Dog) other).getHeight() ;
+        (Math.abs( ( (Dog)other).getHeight()) - 1.0 < tolerance  );
 
 
     }//end equals
+
+
+
 } //end class

@@ -27,9 +27,9 @@ public class Main {
         if(response ==1)
             joe = new Rottweiler("Spike", 5, false, 65.3);
         else if (response ==2)
-            new Poodle("Fifi",2,false,16.8);
+            joe = new Poodle("Fifi",2,false,16.8);
         else if (response ==3)
-            new Chihuahua("Jose",6, true,3.9);
+            joe = new Chihuahua("Jose",6, true,3.9);
 
         joe.speak();
         System.out.println(joe.toString());
