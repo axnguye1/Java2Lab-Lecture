@@ -77,14 +77,16 @@ public abstract class Dog{
     */
         double tolerance = 0.00001;
 
-        if (this.getClass() != other.getClass() )
-            return false;
+        //if (this.getClass() != other.getClass() )
+       if (other instanceof Dog)
+           //Dog alltheDogs = (Dog) object;
+            return true;
         else
         return this.getName() == ((Dog) other).getName() &&
                 this.getAge() == ((Dog) other).getAge() &&
                 this.getFedOrNot() == ((Dog) other).getFedOrNot() &&
                // && this.getHeight() == ((Dog) other).getHeight() ;
-        (Math.abs( ( (Dog)other).getHeight()) - 1.0 < tolerance  );
+        (Math.abs( ( ( (Dog)other).getHeight()) - 1.0) < tolerance  );
 
 
     }//end equals
