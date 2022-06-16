@@ -89,8 +89,9 @@ public class PacMan {
     public void setSpeedY(int newSpeedY){ this.SpeedY= newSpeedY; }
 /**
  * @since 6/15/22
- * The move method allows inputs to control SpeedX and SpeedY(for ex: if input W, then Direction.UP and speed is > 0)
- * The move method also locks character into boundaries.
+ * @custom.ensure The move method allows inputs to control SpeedX and SpeedY(for ex: if input W, then Direction.UP and speed is > 0)
+ * @custom.ensure 10 < getY() < 490
+ * @custom.ensure  10 < getX() < 190
  */
     public void move(int newSpeedX, int newSpeedY){
         //new position is dependent on the old position, speed and current dirc.
