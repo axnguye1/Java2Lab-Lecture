@@ -1,3 +1,7 @@
+/**
+ * @author Amanda Nguyen
+ * @since   6/16/22
+ */
 public abstract class ArmorBase {
     protected String name;
     protected String desc;
@@ -9,6 +13,16 @@ public abstract class ArmorBase {
 
     protected int value;
 
+    /**
+     *
+     * @param name displays the armors type/name
+     * @param desc unique description of armor
+     * @param rating displays rating so players can decide what armor is better than what armor.
+     * @param value displays gold coin value
+     * @param durability displays durability until item gets destroyed
+     * @param weight weight effects swiftness. every weight makes player velocity .5 lower. (Thirst helps velocity go up)
+     * @param defenseStat Amounts to the number of damage negated from attackstrength.
+     */
     public ArmorBase(String name, String desc, int rating,int value, int durability, int weight, int defenseStat) {
         this.name = name;
         this.desc = desc;
@@ -19,6 +33,10 @@ public abstract class ArmorBase {
         this.value = value;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the name of the armor piece
+     */
     public String getName() {
         return name;
     }
@@ -27,6 +45,11 @@ public abstract class ArmorBase {
         this.name = name;
     }
 
+    /**
+     *
+     * @since 6/16/22
+     * @return the item description of armor.
+     */
     public String getDesc() {
         return desc;
     }
@@ -35,6 +58,10 @@ public abstract class ArmorBase {
         this.desc = desc;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the armor's rating/ item score
+     */
     public int getRating() {
         return rating;
     }
@@ -43,6 +70,10 @@ public abstract class ArmorBase {
         this.rating = rating;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the item's durability
+     */
     public int getDurability() {
         return durability;
     }
@@ -51,6 +82,10 @@ public abstract class ArmorBase {
         this.durability = durability;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns weight of armor
+     */
     public int getWeight() {
         return weight;
     }
@@ -59,6 +94,10 @@ public abstract class ArmorBase {
         this.weight = weight;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the item's defense stat
+     */
     public int getDefenseStat() {
         return defenseStat;
     }
@@ -67,11 +106,23 @@ public abstract class ArmorBase {
         this.defenseStat = defenseStat;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the item's gold value
+     */
     public int getValue() {
         return value;
     }
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    /**
+     *
+     * @param name changes the item name
+     */
+    public void setArmorName(String name) {
+        this.name = name;
     }
 }//end class

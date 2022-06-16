@@ -1,3 +1,6 @@
+/**
+ * @author Ted Holmberg
+ */
 public abstract class StackableItem extends ItemBase implements Stackable{
     protected int quantity;
     protected int maxStacks;
@@ -25,6 +28,10 @@ public abstract class StackableItem extends ItemBase implements Stackable{
         }
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns the quantity
+     */
     public int getQuantity() {
         return quantity;
     }
@@ -33,6 +40,10 @@ public abstract class StackableItem extends ItemBase implements Stackable{
         this.quantity = quantity;
     }
 
+    /**
+     * @since 6/16/22
+     * @return the max number of items in one stack of that item.
+     */
     public int getMaxStacks() {
         return maxStacks;
     }

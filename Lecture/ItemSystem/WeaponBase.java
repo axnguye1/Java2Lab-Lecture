@@ -9,8 +9,16 @@ public abstract class WeaponBase  {
     protected int value;
 
 
-
-
+    /**
+     * @since 6/16/22
+     * @param name weapon name
+     * @param desc weapon description, includes attributes of that weapon
+     * @param rating weapon rating, to show which weapon is better scored than another weapon
+     * @param value value of weapon
+     * @param durability durability of weapon(when weapon Destroy()'s it drops a craftable piece for a new weapon)
+     * @param weight weight of weapon, weight affects speed by .5 per lb.
+     * @param attackDamage amount of damage inflicted to enemy or another person BEFORE defense Stat is applied and Buffs.
+     */
     public WeaponBase(String name, String desc, int rating, int value, int durability, int weight, int attackDamage) {
         this.name = name;
         this.desc = desc;
@@ -21,6 +29,10 @@ public abstract class WeaponBase  {
         this.value = value;
     }
 
+    /**
+     * @since 6/16/22
+     * @return item name
+     */
     public String getName() {
         return name;
     }
@@ -29,6 +41,10 @@ public abstract class WeaponBase  {
         this.name = name;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns description of item
+     */
     public String getDesc() {
         return desc;
     }
@@ -37,6 +53,10 @@ public abstract class WeaponBase  {
         this.desc = desc;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns item rating/score
+     */
     public int getRating() {
         return rating;
     }
@@ -45,6 +65,10 @@ public abstract class WeaponBase  {
         this.rating = rating;
     }
 
+    /**
+     * @since 6/16/22
+     * @return item durability
+     */
     public int getDurability() {
         return durability;
     }
@@ -53,6 +77,10 @@ public abstract class WeaponBase  {
         this.durability = durability;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns weight of item
+     */
     public int getWeight() {
         return weight;
     }
@@ -61,6 +89,10 @@ public abstract class WeaponBase  {
         this.weight = weight;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns attack damage
+     */
     public int getAttackDamage() {
         return attackDamage;
     }
@@ -69,6 +101,10 @@ public abstract class WeaponBase  {
         this.attackDamage = attackDamage;
     }
 
+    /**
+     * @since 6/16/22
+     * @return returns value of item in Gold coins
+     */
     public int getValue() {
         return value;
     }

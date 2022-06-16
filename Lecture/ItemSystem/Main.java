@@ -1,3 +1,7 @@
+/**
+ * @author Amanda Nguyen
+ * @since   6/16/22
+ */
 public class Main {
     public static void main(String[] args){
         Potion p = new Potion(3);
@@ -5,6 +9,7 @@ public class Main {
         Arrow arrows = new Arrow(16);
         EmptyBottle eb = new EmptyBottle(3);
         IronLongSword ils = new IronLongSword();
+        IronHelmet ih = new IronHelmet();
 
         System.out.println(w);
         w.consume();
