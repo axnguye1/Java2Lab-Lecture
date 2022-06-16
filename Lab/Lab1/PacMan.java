@@ -92,16 +92,17 @@ public class PacMan {
  * The move method allows inputs to control SpeedX and SpeedY(for ex: if input W, then Direction.UP and speed is > 0)
  * The move method also locks character into boundaries.
  */
-    public void move(){
+    public void move(int newSpeedX, int newSpeedY){
         //new position is dependent on the old position, speed and current dirc.
         hisCenterLocation.setY(hisCenterLocation.getY() + getSpeedY());
         hisCenterLocation.setX(hisCenterLocation.getX() + getSpeedX());
 
 
-        this.hisDirection=Direction.LEFT;
-      this.hisDirection=Direction.RIGHT;
-      this.hisDirection=Direction.DOWN;
-        this.hisDirection=Direction.UP;
+        if(newSpeedX<0)this.hisDirection=Direction.LEFT;
+        if(newSpeedX>0)this.hisDirection=Direction.RIGHT;
+        if(newSpeedY<0)this.hisDirection=Direction.DOWN;
+        if(newSpeedY>0)this.hisDirection=Direction.UP;
+
 
        }
 
