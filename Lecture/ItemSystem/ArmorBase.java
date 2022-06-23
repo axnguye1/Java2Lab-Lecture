@@ -1,3 +1,5 @@
+import javax.naming.Name;
+
 /**
  * @author Amanda Nguyen
  * @since   6/16/22
@@ -13,6 +15,8 @@ public abstract class ArmorBase {
 
     protected int value;
 
+    protected boolean isEquipped;
+
     /**
      *
      * @param name displays the armors type/name
@@ -23,7 +27,7 @@ public abstract class ArmorBase {
      * @param weight weight effects swiftness. every weight makes player velocity .5 lower. (Thirst helps velocity go up)
      * @param defenseStat Amounts to the number of damage negated from attackstrength.
      */
-    public ArmorBase(String name, String desc, int rating,int value, int durability, int weight, int defenseStat) {
+    public ArmorBase(String name, String desc, int rating,int value, int durability, int weight, int defenseStat, boolean isEquipped) {
         this.name = name;
         this.desc = desc;
         this.rating = rating;
@@ -31,6 +35,7 @@ public abstract class ArmorBase {
         this.weight = weight;
         this.defenseStat = defenseStat;
         this.value = value;
+        this.isEquipped=isEquipped;
     }
 
     /**
@@ -122,7 +127,16 @@ public abstract class ArmorBase {
      *
      * @param name changes the item name
      */
+
     public void setArmorName(String name) {
         this.name = name;
+    }
+
+    public boolean isEquipped() {
+        return isEquipped;
+    }
+
+    public void setEquipped(boolean equipped) {
+        isEquipped = equipped;
     }
 }//end class

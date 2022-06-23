@@ -1,4 +1,4 @@
-public  class Water extends StackableItem implements Consumable, Breakable, addThirst {
+public  class Water extends StackableItem implements Consumable, Breakable {
     public Water(int quantity){
     super(10, "Water", quantity, 3);
     }
@@ -11,12 +11,12 @@ public  class Water extends StackableItem implements Consumable, Breakable, addT
 
     @Override
     public void destroy(){
-        this.setItemName("Empty Glass Bottle");
+        this.setItemName("Empty Bottle");
     }
-    @Override
+  /*  @Override
     public void addThirst(){
-        this.addThirst();
-    }
+        this.hydrate();
+    }*/
 
     @Override
     public String toString(){

@@ -1,4 +1,6 @@
-public class EmptyBottle extends StackableItem implements Fillable {
+import javax.security.auth.Destroyable;
+
+public class EmptyBottle extends StackableItem implements Fillable, Destroyable {
     public EmptyBottle(int quantity){
         super( 2,"Empty Glass Bottle", quantity, 3);
     }
@@ -9,6 +11,8 @@ public class EmptyBottle extends StackableItem implements Fillable {
     public void fill(){
         this.setQuantity(this.quantity-1);
     }
+    @Override
+    public void destroy(){this.setItemName("Broken Bottles");}
 
     @Override
     public String toString(){

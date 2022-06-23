@@ -8,6 +8,8 @@ public abstract class WeaponBase  {
 
     protected int value;
 
+    protected boolean isEquipped;
+
 
     /**
      * @since 6/16/22
@@ -19,7 +21,7 @@ public abstract class WeaponBase  {
      * @param weight weight of weapon, weight affects speed by .5 per lb.
      * @param attackDamage amount of damage inflicted to enemy or another person BEFORE defense Stat is applied and Buffs.
      */
-    public WeaponBase(String name, String desc, int rating, int value, int durability, int weight, int attackDamage) {
+    public WeaponBase(String name, String desc, int rating, int value, int durability, int weight, int attackDamage,boolean isEquipped) {
         this.name = name;
         this.desc = desc;
         this.rating = rating;
@@ -27,6 +29,7 @@ public abstract class WeaponBase  {
         this.weight = weight;
         this.attackDamage = attackDamage;
         this.value = value;
+        this.isEquipped = isEquipped;
     }
 
     /**
@@ -114,5 +117,13 @@ public abstract class WeaponBase  {
     }
     public void setWeaponName(String name) {
         this.name = name;
+    }
+
+    public boolean isEquipped() {
+        return isEquipped;
+    }
+
+    public void setEquipped(boolean equipped) {
+        isEquipped = equipped;
     }
 }//end class

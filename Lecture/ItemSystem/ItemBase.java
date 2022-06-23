@@ -2,6 +2,8 @@ public abstract class ItemBase {
     protected int itemCost;
     protected String itemName;
 
+
+
     /**
      *
      * @param itemCost the cost of an item in gold coins
@@ -10,6 +12,7 @@ public abstract class ItemBase {
     public ItemBase(int itemCost, String itemName) {
         this.itemCost = itemCost;
         this.itemName = itemName;
+
     }
 
     /**
