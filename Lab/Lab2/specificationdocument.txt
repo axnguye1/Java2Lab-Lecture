@@ -1,0 +1,14 @@
+Objects needed to build:
+Walls- that prevent pacman and ghosts from escaping the play
+area.
+A game boundary, for the 200x500 pixel ground, so "dots" and food can
+not spawn outside of the boundary.
+NOTE: some pacman levels allow pac man and ghosts to go through one side of the boundary
+to the mirrored side.
+Fruits needed to give a speed buff for pac man.
+Big Dots so pac man can eat ghosts.
+
+Edge testing could be testing the gameobjects with one another for collision
+pacman colliding with ghost = pacman is not alive, game over
+pacman/ghosts w/ walls = can not move there
+pacman colliding with scared ghosts = ghost dies then respawns

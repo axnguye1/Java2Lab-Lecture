@@ -24,8 +24,8 @@ public class PacMan {
 
     private PixelLocation PixelLocation;
     private Direction hisDirection;
-    private int SpeedX;
-    private int SpeedY;
+    private int Speed;
+
 
     /**
      *
@@ -69,44 +69,42 @@ public class PacMan {
      * @since 6/15/22
      * @return returns values for speed X value
      */
-    public int getSpeedX(){
-        return this.SpeedX;
+    public int getSpeed(){
+        return this.Speed;
     }
     /**
      * @since 6/15/22
      * @return returns values for speed Y value
      */
-    public int getSpeedY(){
-        return this.SpeedY;
-    }
+
     //commands or setters
     public void setDirection(Direction newDirection){
         this.hisDirection = newDirection;
     }
-    public void setSpeedX(int newSpeedX){
-        this.SpeedX= newSpeedX;
+    public void setSpeedX(int newSpeed){
+        this.Speed= newSpeed;
     }
-    public void setSpeedY(int newSpeedY){ this.SpeedY= newSpeedY; }
+
 /**
  * @since 6/15/22
  * @custom.ensure The move method allows inputs to control SpeedX and SpeedY(for ex: if input W, then Direction.UP and speed is > 0)
  * @custom.ensure 10 < getY() < 490
  * @custom.ensure  10 < getX() < 190
  */
-    public void move(int newSpeedX, int newSpeedY){
+    public void move() {
         //new position is dependent on the old position, speed and current dirc.
-        hisCenterLocation.setY(hisCenterLocation.getY() + getSpeedY());
-        hisCenterLocation.setX(hisCenterLocation.getX() + getSpeedX());
 
+        if (hisDirection == Direction.UP) {
+            hisCenterLocation.setY(hisCenterLocation.getY() - this.Speed);
+        } else if (hisDirection == Direction.DOWN) {
+            hisCenterLocation.setY(hisCenterLocation.getY() + this.Speed);
+        } else if (hisDirection == Direction.LEFT) {
+            hisCenterLocation.setX(hisCenterLocation.getX() - this.Speed);
 
-        if(newSpeedX<0)this.hisDirection=Direction.LEFT;
-        if(newSpeedX>0)this.hisDirection=Direction.RIGHT;
-        if(newSpeedY<0)this.hisDirection=Direction.DOWN;
-        if(newSpeedY>0)this.hisDirection=Direction.UP;
-
-
-       }
-
+        }else if(hisDirection == Direction.RIGHT) {
+            hisCenterLocation.setX(hisCenterLocation.getX() + this.Speed);
+        }
+    }
 
 
     public void setAlive(boolean value){
