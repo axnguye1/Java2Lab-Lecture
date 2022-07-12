@@ -1,3 +1,6 @@
+package test;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,7 +18,7 @@ class EmptyBottleTest {
     void destroy(){
         EmptyBottle eb = new EmptyBottle();
         eb.destroy();
-        assertEquals("Broken Bottles", eb.getItemName());
+        Assertions.assertEquals("Broken Bottles", eb.getItemName());
 
     }
 }

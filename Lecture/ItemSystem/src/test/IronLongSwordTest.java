@@ -1,3 +1,6 @@
+package test;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,6 +18,6 @@ class IronLongSwordTest {
     void destroy() {
         IronLongSword ils = new IronLongSword();
         ils.destroy();
-        assertEquals("Sword Hilt",ils.getName());
+        Assertions.assertEquals("Sword Hilt",ils.getName());
     }
 }

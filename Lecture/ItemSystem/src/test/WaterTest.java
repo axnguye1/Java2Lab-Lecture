@@ -1,3 +1,6 @@
+package test;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +11,8 @@ class WaterTest {
     void consume() {
         Water w = new Water();
         w.consume();
+        Assertions.assertEquals(0,w.getQuantity());
+        //assert expected value of water, expected = actual || pass
 
     }
 
@@ -15,7 +20,7 @@ class WaterTest {
     void destroy() {
         Water w = new Water();
         w.destroy();
-        assertEquals("Empty Bottle", w.getItemName());
+        Assertions.assertEquals("Empty Bottle", w.getItemName());
     }
 
 

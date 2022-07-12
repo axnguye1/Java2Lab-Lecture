@@ -1,3 +1,6 @@
+package test;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +17,6 @@ class PotionTest {
     void destroy() {
         Potion p = new Potion();
         p.destroy();
-        assertEquals("Broken Bottles", p.getItemName());
+        Assertions.assertEquals("Broken Bottles", p.getItemName());
     }
 }

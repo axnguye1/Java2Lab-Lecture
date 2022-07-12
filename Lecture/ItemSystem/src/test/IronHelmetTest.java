@@ -1,3 +1,6 @@
+package test;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +19,6 @@ class IronHelmetTest {
     void destroy() {
         IronHelmet ih = new IronHelmet();
         ih.destroy();
-        assertEquals("Iron Nugget",ih.getName());
+        Assertions.assertEquals("Iron Nugget",ih.getName());
     }
 }

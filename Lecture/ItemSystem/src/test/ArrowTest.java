@@ -1,5 +1,9 @@
-import org.junit.jupiter.api.Test;
+package test;
 
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import
 import static org.junit.jupiter.api.Assertions.*;
 
 class ArrowTest {
@@ -8,14 +12,14 @@ class ArrowTest {
     void testConsume() {
         Arrow a = new Arrow();
         a.consume();
-
+        Assertions.assertEquals(0,a.getQuantity());
     }
 
     @Test
     void testDestroy() {
         Arrow a = new Arrow();
         a.destroy();
-        assertEquals("Arrows", a.getItemName());
+        Assertions.assertEquals("Arrows", a.getItemName());
     }
 
 
